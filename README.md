@@ -1,7 +1,7 @@
 # Training your LLMs with **Zero Code**
 
 
-LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m., and praying your eval score. Post-training should be easy as sh*t.
+LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m., and praying your eval score. Post-training should be easy as eating a banana.
 
 > Fill one YAML. Run one command. Let the agent do the boring work.  
 
