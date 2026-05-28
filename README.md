@@ -11,11 +11,11 @@ pip install -e .
 autopilot-autonomous --config autopilot.yaml \
   --goal "Improve ../qwen3-1.7b on code generation tasks." \
   --output-dir runs/coding \
-  --max-hours 10
+  --max-hours 5
 ```
 
 
-## Demo
+## Example
 
 ![visualize .PNG example](./example.PNG)
 
