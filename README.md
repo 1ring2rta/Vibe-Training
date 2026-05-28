@@ -1,6 +1,6 @@
 # PostTraining with Zero Code
 
-LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m.🫸, and praying your eval score 🤗. Post-training should be easy as eating a banana (🍌).
+LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m.🫸, and praying your eval score 🤗. Try this, post-training should be easy as ***t.
 
 ## Quick Start
 
