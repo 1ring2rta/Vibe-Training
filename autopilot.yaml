@@ -1,0 +1,71 @@
+# LLM Training Autopilot v0.7.0 example config.
+# Keep real API keys in a private autopilot.yaml or environment variables.
+hf:
+  token: ""
+  endpoint: ""
+
+clients:
+  teacher:
+    type: "openai_compatible"
+    # api_key: "sk-jQMCzHSdXXzcSV57Qe4lyBVn5EAdarYXrSlspQ0v3wWxrMiA"
+    # base_url: "https://api.moonshot.cn/v1"
+    # model: "kimi-k2.6"
+    api_key: "sk-kNcoBLkGGSxhlvZ0kofiow"
+    base_url: "https://www.litellm.org/"
+    model: "gpt-5.5"
+    timeout: 600
+    record_trajectory: true
+    params:
+      temperature: 1.0
+      # top_p: 0.95
+      max_completion_tokens: 122880
+    extra_body: {}
+    capabilities:
+      reasoning_content: true
+      native_tool_calls: true
+
+resources:
+  gpus:
+    cuda_visible_devices: "0,1"
+
+autonomous:
+  enabled: true
+  mode: "agent_kernel"
+
+frontier_trajectory:
+  enabled: true
+  root: ".autopilot/frontier_trajectory"
+  max_chars_per_field: 0
+  write_trainable: true
+  teacher_only: true
+
+web_search:
+  provider: "serper"
+  serper_api_key: "7aa884b108abc9ef5824672e96c26fd088eb9bbd"
+  brave_api_key: ""
+  tavily_api_key: ""
+
+runtime:
+  repo_path: "."
+  environments:
+    - name: "llamaf"
+      path: "/inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3"
+      conda_env: "llamaf"
+      activation: "source /inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3/bin/activate llamaf"
+      description: "Pre-installed LLaMA-Factory training environment; use for SFT/DPO/KTO/PT/RM/PPO/GRPO training."
+      capabilities: ["llamafactory", "sft", "dpo", "kto", "pt", "rm", "ppo", "grpo", "training"]
+
+    - name: "lapha-beta"
+      path: "/inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3"
+      conda_env: "lapha-beta"
+      activation: "source /inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3/bin/activate lapha-beta"
+      description: "Verified local vLLM serving/probe/eval environment."
+      capabilities: ["vllm", "serving", "probe", "eval", "openai-compatible-server", "rlvr"]
+
+ask_human:
+  enabled: true
+  mode: "queue"
+
+memory:
+  claude:
+    enabled: true

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-training-autopilot"
+version = "0.7.1"
+description = "Fully autonomous LLM post-training agent kernel: generic OpenAI-compatible teacher clients, tool-enabled turns, remote-teacher-only trajectory capture, real-benchmark stop policy, resumable event log, artifact contracts, and LLaMA-Factory/vLLM orchestration tools."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "LLM Training Autopilot" }]
+dependencies = [
+  "huggingface_hub>=0.24.0",
+  "datasets>=2.18.0",
+  "python-dotenv>=1.0.0",
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.0",
+  "PyYAML>=6.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+openai-sdk = ["openai>=1.0.0"]
+
+[project.scripts]
+autopilot-search = "autopilot.cli.search:main"
+autopilot-context = "autopilot.cli.context:main"
+autopilot-agent = "autopilot.cli.agent:main"
+autopilot-doctor = "autopilot.cli.doctor:main"
+autopilot-human = "autopilot.cli.human:main"
+autopilot-ask-human = "autopilot.cli.ask_human:main"
+autopilot-install-env = "autopilot.cli.install_env:main"
+autopilot-conversations = "autopilot.cli.conversations:main"
+autopilot-runtime = "autopilot.cli.runtime:main"
+autopilot-autonomous = "autopilot.cli.autonomous:main"
+autopilot-processes = "autopilot.cli.processes:main"
+autopilot-eval-programs = "autopilot.cli.eval_programs:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["autopilot*"]
+
+[tool.setuptools.package-data]
+"autopilot" = ["skills/*/SKILL.md", "memory/*.md"]
