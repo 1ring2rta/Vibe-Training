@@ -1,14 +1,9 @@
 # Training your LLMs with **Zero Code**
 
 
-
 LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m., and praying your eval score.
 
-This project gives you an **autopilot loop for LLM post-training**
 > Fill one YAML. Run one command. Let the agent do the boring work.  
-> Easy as sh*t.
-
----
 
 ## Quick Start
 ```sh
@@ -19,7 +14,6 @@ autopilot-autonomous --config autopilot.yaml \
   --max-hours 10
 ```
 
----
 
 ## Demo
 
