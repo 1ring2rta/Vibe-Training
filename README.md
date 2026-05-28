@@ -1,11 +1,11 @@
-# Training your LLMs with **Zero Code**
+# PostTraining with Zero Code
 
+LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m.🫸, and praying your eval score 🤗. Post-training should be easy as eating a banana (🍌).
 
-LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m., and praying your eval score. Post-training should be easy as eating a banana.
+## Quick Start
 
 > Fill one YAML. Run one command. Let the agent do the boring work.  
 
-## Quick Start
 ```sh
 pip install -e .
 autopilot-autonomous --config autopilot.yaml \
