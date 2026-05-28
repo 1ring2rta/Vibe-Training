@@ -1,5 +1,3 @@
-# LLM Training Autopilot v0.7.0 example config.
-# Keep real API keys in a private autopilot.yaml or environment variables.
 hf:
   token: ""
   endpoint: ""
@@ -7,16 +5,13 @@ hf:
 clients:
   teacher:
     type: "openai_compatible"
-    # api_key: "sk-jQMCzHSdXXzcSV57Qe4lyBVn5EAdarYXrSlspQ0v3wWxrMiA"
-    # base_url: "https://api.moonshot.cn/v1"
-    # model: "kimi-k2.6"
-    api_key: "sk-kNcoBLkGGSxhlvZ0kofiow"
-    base_url: "https://www.litellm.org/"
-    model: "gpt-5.5"
+    api_key: 
+    base_url: 
+    model: 
     timeout: 600
     record_trajectory: true
     params:
-      temperature: 1.0
+      # temperature: 1.0
       # top_p: 0.95
       max_completion_tokens: 122880
     extra_body: {}
@@ -41,26 +36,26 @@ frontier_trajectory:
 
 web_search:
   provider: "serper"
-  serper_api_key: "7aa884b108abc9ef5824672e96c26fd088eb9bbd"
+  serper_api_key: 
   brave_api_key: ""
   tavily_api_key: ""
 
 runtime:
   repo_path: "."
   environments:
-    - name: "llamaf"
-      path: "/inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3"
+    - name: "llama-factory"
+      path: "../anaconda3"
       conda_env: "llamaf"
-      activation: "source /inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3/bin/activate llamaf"
+      activation: "source ../anaconda3/bin/activate llamaf"
       description: "Pre-installed LLaMA-Factory training environment; use for SFT/DPO/KTO/PT/RM/PPO/GRPO training."
       capabilities: ["llamafactory", "sft", "dpo", "kto", "pt", "rm", "ppo", "grpo", "training"]
 
-    - name: "lapha-beta"
-      path: "/inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3"
+    - name: "vllm"
+      path: "../anaconda3"
       conda_env: "lapha-beta"
-      activation: "source /inspire/ssd/project/sais-bio/public/hanchen/condaEnvs/anaconda3/bin/activate lapha-beta"
+      activation: "source ../anaconda3/bin/activate vllm"
       description: "Verified local vLLM serving/probe/eval environment."
-      capabilities: ["vllm", "serving", "probe", "eval", "openai-compatible-server", "rlvr"]
+      capabilities: ["vllm"]
 
 ask_human:
   enabled: true
