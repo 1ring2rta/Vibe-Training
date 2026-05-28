@@ -1,1 +1,1 @@
-[![visualize .PNG example](./example.PNG)](./example.html)
+![visualize .PNG example](./example.PNG)
