@@ -4,8 +4,8 @@ LLM post-training should not feel like babysitting 20 scripts, manually hunting 
 
 ## Quick Start
 
-> Fill one YAML. Run one command. Let the agent do the boring work.  
-
+> Fill the `autopilot.yaml` (including LLM API_KEY, BASE_URL, MODEL_NAME; serper API_KEY; installed training environments).
+> Run this:
 ```sh
 pip install -e .
 autopilot-autonomous --config autopilot.yaml \
@@ -13,7 +13,7 @@ autopilot-autonomous --config autopilot.yaml \
   --output-dir runs/coding \
   --max-hours 5
 ```
-
+> Go to bed.
 
 ## Example
 
