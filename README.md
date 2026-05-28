@@ -6,11 +6,11 @@ LLM post-training should not feel like babysitting 20 scripts, manually hunting 
 
 > Fill the `autopilot.yaml` (including
 
-LLM API_KEY, BASE_URL, MODEL_NAME;
+- LLM API_KEY, BASE_URL, MODEL_NAME;
 
-serper API_KEY; 
+- serper API_KEY; 
 
-installed training environments).
+- installed training environments).
 
 > Run this:
 ```sh
