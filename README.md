@@ -4,15 +4,16 @@ LLM post-training should not feel like babysitting 20 scripts, manually hunting 
 
 ## Quick Start
 
-> Fill the `autopilot.yaml` (including
+> Fill the `autopilot.yaml`, including:
 
 - LLM API_KEY, BASE_URL, MODEL_NAME;
 
-- serper API_KEY; 
+- SERPER_API_KEY; 
 
-- installed training environments).
+- Installed training environments.
 
 > Run this:
+
 ```sh
 pip install -e .
 autopilot-autonomous --config autopilot.yaml \
