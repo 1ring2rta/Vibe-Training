@@ -1,7 +1,5 @@
 # PostTraining with Zero Code
 
-LLM post-training should not feel like babysitting 20 scripts, manually hunting datasets, checking logs at 3 a.m.🫸, and praying your eval score 🤗. Try this, post-training should be easy as banana.
-
 ## Quick Start
 
 > Fill the `autopilot.yaml`, including:
@@ -22,7 +20,7 @@ autopilot-autonomous --config autopilot.yaml \
   --max-hours 5
 ```
 
-> Sleeeeeeep 🛌 zzZ
+> Go to bed. 🛌 zzZ
 
 ## Example
 
