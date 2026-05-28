@@ -22,7 +22,7 @@ autopilot-autonomous --config autopilot.yaml \
   --max-hours 5
 ```
 
-> Go to bed.
+> Sleeeeeeep 🛌 zzZ
 
 ## Example
 
